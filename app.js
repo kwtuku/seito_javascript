@@ -19,34 +19,56 @@ $buttun[3].textContent = answers[3];
 
 
 // ボタンをクリックしたら正誤判定
-$buttun[0].addEventListener("click", () => {
-    if(correct === $buttun[0].textContent){
-        window.alert("正解！");
-    } else {
-        window.alert("不正解！");
-    }
-});
+$buttun[0].addEventListener("click", evetFunc0);
+function evetFunc0(){
+    window.alert("不正解！");
+}
 
-$buttun[1].addEventListener("click", () => {
-    if(correct === $buttun[1].textContent){
-        window.alert("正解！");
-    } else {
-        window.alert("不正解！");
-    }
-});
+$buttun[1].addEventListener("click", evetFunc1);
+function evetFunc1(){
+    window.alert("不正解！");
+}
 
-$buttun[2].addEventListener("click", () => {
-    if(correct === $buttun[2].textContent){
-        window.alert("正解！");
-    } else {
-        window.alert("不正解！");
-    }
-});
+$buttun[2].addEventListener("click", evetFunc2);
+function evetFunc2(){
+    window.alert("不正解！");
+}
 
-$buttun[3].addEventListener("click", () => {
-    if(correct === $buttun[3].textContent){
-        window.alert("正解！");
-    } else {
-        window.alert("不正解！");
-    }
-});
+$buttun[3].addEventListener("click", evetFunc3);
+function evetFunc3(){
+    window.alert("正解！");
+}
+
+
+// ボタンをクリックしたら正誤判定
+// $buttun[0].addEventListener("click", () => {
+//     if(correct === $buttun[0].textContent){
+//         window.alert("正解！");
+//     } else {
+//         window.alert("不正解！");
+//     }
+// });
+
+// $buttun[1].addEventListener("click", () => {
+//     if(correct === $buttun[1].textContent){
+//         window.alert("正解！");
+//     } else {
+//         window.alert("不正解！");
+//     }
+// });
+
+// $buttun[2].addEventListener("click", () => {
+//     if(correct === $buttun[2].textContent){
+//         window.alert("正解！");
+//     } else {
+//         window.alert("不正解！");
+//     }
+// });
+
+// $buttun[3].addEventListener("click", () => {
+//     if(correct === $buttun[3].textContent){
+//         window.alert("正解！");
+//     } else {
+//         window.alert("不正解！");
+//     }
+// });
