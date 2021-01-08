@@ -27,3 +27,26 @@ $buttun[0].addEventListener("click", () => {
     }
 });
 
+$buttun[1].addEventListener("click", () => {
+    if(correct === $buttun[1].textContent){
+        window.alert("正解！");
+    } else {
+        window.alert("不正解！");
+    }
+});
+
+$buttun[2].addEventListener("click", () => {
+    if(correct === $buttun[2].textContent){
+        window.alert("正解！");
+    } else {
+        window.alert("不正解！");
+    }
+});
+
+$buttun[3].addEventListener("click", () => {
+    if(correct === $buttun[3].textContent){
+        window.alert("正解！");
+    } else {
+        window.alert("不正解！");
+    }
+});
