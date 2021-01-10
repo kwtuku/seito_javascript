@@ -49,11 +49,21 @@ setupQuiz();
 
 
 // ボタンをクリックしたら正誤判定
+const quizLength = quiz.length;
+let quizIndex = 0;
+
 const clickHandler = (e) => {
     if(correct === e.target.textContent){
         window.alert("正解！");
     } else {
         window.alert("不正解！");
+    }
+
+    quizIndex++;
+    if(quizIndex < quizLength){
+        setupQuiz();
+    } else {
+        window.alert("終了！");
     }
 }
 
