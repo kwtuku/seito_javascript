@@ -1,11 +1,33 @@
-const question = "ゲーム市場、最も売れたゲーム機は次の内どれ？";
-const answers = [
-    "スーパーファミコン", 
-    "プレイステーション2", 
-    "ニンテンドースイッチ", 
-    "ニンテンドーDS"
+const quiz = [
+    {
+        question: "ゲーム市場、最も売れたゲーム機は次の内どれ？",
+        answers: [
+            "スーパーファミコン", 
+            "プレイステーション2", 
+            "ニンテンドースイッチ", 
+            "ニンテンドーDS"
+        ],
+        correct: "ニンテンドーDS"
+    }, {
+        question: "糸井重里が企画に関わった、任天堂の看板ゲームといえば？",
+        answers: [
+            "MOTHER2", 
+            "スーパーマリオブラザーズ3", 
+            "スーパードンキーコング", 
+            "星のカービィ"
+        ],
+        correct: "MOTHER2"
+    }, {
+        question: "ファイナルファンタジーⅣの主人公の名前は？",
+        answers: [
+            "フリオニール", 
+            "クラウド", 
+            "ティーダ", 
+            "セシル"
+        ],
+        correct: "セシル"
+    }
 ];
-const correct = "ニンテンドーDS";
 
 
 const $button = document.getElementsByTagName("button");
