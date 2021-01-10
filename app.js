@@ -10,11 +10,13 @@ const correct = "ニンテンドーDS";
 
 const $button = document.getElementsByTagName("button");
 
+const buttonLength = $button.length;
+
+
 // クイズの問題文、選択肢を定義
 const setupQuiz = () => {
     document.getElementById("js-question").textContent = question;
     let buttonIndex = 0;
-    let buttonLength = $button.length;
     while(buttonIndex < buttonLength){
         $button[buttonIndex].textContent = answers[buttonIndex];
         buttonIndex++;
@@ -34,7 +36,6 @@ const clickHandler = (e) => {
 }
 
 let handlerIndex = 0;
-let buttonLength = $button.length;
 while(handlerIndex < buttonLength){
     $button[handlerIndex].addEventListener("click", (e) => {
         clickHandler(e);
