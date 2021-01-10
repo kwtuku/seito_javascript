@@ -33,19 +33,12 @@ const clickHandler = (e) => {
     }
 }
 
-$button[0].addEventListener("click", (e) => {
-    clickHandler(e);
-});
-
-$button[1].addEventListener("click", (e) => {
-    clickHandler(e);
-});
-
-$button[2].addEventListener("click", (e) => {
-    clickHandler(e);
-});
-
-$button[3].addEventListener("click", (e) => {
-    clickHandler(e);
-});
+let handlerIndex = 0;
+let buttonLength = $button.length;
+while(handlerIndex < buttonLength){
+    $button[handlerIndex].addEventListener("click", (e) => {
+        clickHandler(e);
+    });
+    handlerIndex++;
+}
 
