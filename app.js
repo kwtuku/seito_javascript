@@ -34,32 +34,37 @@ const $button = document.getElementsByTagName("button");
 
 const buttonLength = $button.length;
 
+const quizLength = quiz.length;
 
-// クイズの問題文、選択肢を定義
+let quizIndex = 0;
+
+
+// クイズの問題文、選択肢をHTMLに反映させる関数を定義
 const setupQuiz = () => {
-    document.getElementById("js-question").textContent = question;
+    document.getElementById("js-question").textContent = quiz[quizIndex].question;
+
     let buttonIndex = 0;
+
     while(buttonIndex < buttonLength){
-        $button[buttonIndex].textContent = answers[buttonIndex];
+        $button[buttonIndex].textContent = quiz[quizIndex].answers[buttonIndex];
         buttonIndex++;
     }
 }
 
+// setupQuizを実行
 setupQuiz();
 
 
-// ボタンをクリックしたら正誤判定
-const quizLength = quiz.length;
-let quizIndex = 0;
-
+// ボタンをクリックしたら正誤判定し、問題文と選択肢を次のものに変更する関数を定義
 const clickHandler = (e) => {
-    if(correct === e.target.textContent){
+    if(quiz[quizIndex].correct === e.target.textContent){
         window.alert("正解！");
     } else {
         window.alert("不正解！");
     }
 
     quizIndex++;
+
     if(quizIndex < quizLength){
         setupQuiz();
     } else {
@@ -67,11 +72,14 @@ const clickHandler = (e) => {
     }
 }
 
+// clickHandlerを実行
 let handlerIndex = 0;
+
 while(handlerIndex < buttonLength){
     $button[handlerIndex].addEventListener("click", (e) => {
         clickHandler(e);
     });
+    
     handlerIndex++;
 }
 
