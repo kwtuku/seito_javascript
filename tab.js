@@ -16,7 +16,11 @@
     // クリックしたら起こる処理
     const handleClick = (e) => {
         e.preventDefault();
-        console.log('Clicked!', e);
+        const $this = e.target;
+        const targetVal = $this.dataset.nav;
+        $tab.querySelectorAll('[data-content="' + targetVal + '"]')[0].style.display = 'block';
+        $nav[targetVal].classList.add('is-active');
+        console.log('Clicked!', targetVal);
     };
     
     // クリックしたら起こる処理を実行
