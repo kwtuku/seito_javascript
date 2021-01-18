@@ -5,30 +5,38 @@
     const $nav = $tab.querySelectorAll('[data-nav]');
     const $content = $tab.querySelectorAll('[data-content]');
     
-    // ページを読み込むと起こる処理
+    // ページが読み込まれると起こる処理
     const init = () => {
         $content[0].style.display = 'block';
     };
     
-    // ページを読み込むと起こる処理を実行
+    // ページが読み込まれると起こる処理を実行
     init();
 
-    // クリックしたら起こる処理
+    // 操作されたら起こる処理
     const handleClick = (e) => {
+        // aタグの処理を無効化
         e.preventDefault();
+
+        // 操作された要素においてデータ属性navのdatasetを定数に
         const $this = e.target;
         const targetVal = $this.dataset.nav;
+
+        // タブの中身を非表示
         let index = 0;
         while(index < $nav.length){
             $content[index].style.display = 'none';
             index++;
         };
+
+        // 操作された要素を表示しis-activeクラスを追加
         $tab.querySelectorAll('[data-content="' + targetVal + '"]')[0].style.display = 'block';
         $nav[targetVal].classList.add('is-active');
+
         console.log('Clicked!', targetVal);
     };
     
-    // クリックしたら起こる処理を実行
+    // クリックされたらhandleClickを実行
     let index = 0;
     while(index < $nav.length){
         $nav[index].addEventListener('click', (e) => handleClick(e));
