@@ -18,6 +18,11 @@
         e.preventDefault();
         const $this = e.target;
         const targetVal = $this.dataset.nav;
+        let index = 0;
+        while(index < $nav.length){
+            $content[index].style.display = 'none';
+            index++;
+        };
         $tab.querySelectorAll('[data-content="' + targetVal + '"]')[0].style.display = 'block';
         $nav[targetVal].classList.add('is-active');
         console.log('Clicked!', targetVal);
