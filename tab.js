@@ -9,7 +9,7 @@
     
     // ページが読み込まれると起こる処理
     const init = () => {
-        $content[0].style.display = 'block';
+        $content[0].style.display = 'none';
     };
     
     // ページが読み込まれると起こる処理を実行
