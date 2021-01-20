@@ -4,6 +4,8 @@
     const $tab = $doc.getElementById('js-tab');
     const $nav = $tab.querySelectorAll('[data-nav]');
     const $content = $tab.querySelectorAll('[data-content]');
+    const ACTIVE_CLASS = 'is-active';
+    const navLen = $nav.length;
     
     // ページが読み込まれると起こる処理
     const init = () => {
@@ -24,22 +26,22 @@
 
         // タブの中身を非表示、is-activeクラスを取り除く
         let index = 0;
-        while(index < $nav.length){
+        while(index < navLen){
             $content[index].style.display = 'none';
-            $nav[index].classList.remove('is-active');
+            $nav[index].classList.remove(ACTIVE_CLASS);
             index++;
         };
      
         // 操作された要素を表示しis-activeクラスを追加
         $tab.querySelectorAll('[data-content="' + targetVal + '"]')[0].style.display = 'block';
-        $nav[targetVal].classList.add('is-active');
+        $nav[targetVal].classList.add(ACTIVE_CLASS);
 
         console.log('Clicked!', targetVal);
     };
     
     // クリックされたらhandleClickを実行
     let index = 0;
-    while(index < $nav.length){
+    while(index < navLen){
         $nav[index].addEventListener('click', (e) => handleClick(e));
         index++;
     };
