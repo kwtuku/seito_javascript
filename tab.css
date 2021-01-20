@@ -16,10 +16,10 @@
     background: #000;
     color: #fff;
 }
-.tab-contents {
+/* .tab-contents {
+} */
+.tab-contents-item {
     border: 1px solid #ccc;
     padding: 20px;
-}
-.tab-contents-item {
     display: none;
 }
