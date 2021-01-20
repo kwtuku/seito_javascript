@@ -38,6 +38,8 @@ const quizLength = quiz.length;
 
 let quizIndex = 0;
 
+let score = 0;
+
 
 // クイズの問題文、選択肢をHTMLに反映させる関数を定義
 const setupQuiz = () => {
@@ -47,6 +49,7 @@ const setupQuiz = () => {
 
     while(buttonIndex < buttonLength){
         $button[buttonIndex].textContent = quiz[quizIndex].answers[buttonIndex];
+
         buttonIndex++;
     }
 }
@@ -59,6 +62,8 @@ setupQuiz();
 const clickHandler = (e) => {
     if(quiz[quizIndex].correct === e.target.textContent){
         window.alert("正解！");
+
+        score++;
     } else {
         window.alert("不正解！");
     }
@@ -68,7 +73,7 @@ const clickHandler = (e) => {
     if(quizIndex < quizLength){
         setupQuiz();
     } else {
-        window.alert("終了！");
+        window.alert("終了！あなたの正解数は" + score + "/" + quizLength + "です！" );
     }
 }
 
