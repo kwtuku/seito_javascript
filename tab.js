@@ -44,6 +44,6 @@
     while(index < navLen){
         $nav[index].addEventListener('click', (e) => handleClick(e));
         index++;
-    };
+    }
 
 })();
