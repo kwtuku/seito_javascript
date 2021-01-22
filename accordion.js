@@ -28,4 +28,12 @@
             $content.style.display = 'block';
         }
     };
+
+    // $triggerがクリックされたら関数clickHandlerを実行
+    const triggerLen = $trigger.length;
+    let index = 0;
+    while (index < triggerLen){
+        $trigger[index].addEventListener('click', (e) => clickHandler(e));
+        index++;
+    }
 })();
