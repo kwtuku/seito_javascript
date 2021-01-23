@@ -44,8 +44,13 @@
     });
 
     const accordion2 = new Accordion({
-        hookName: '#js-accordion',
+        hookName: '#js-accordion2',
         tagName: 'p'
+    });
+
+    const accordion3 = new Accordion({
+        hookName: '#js-accordion3',
+        tagName: 'dt'
     });
 })();
 
