@@ -42,6 +42,11 @@
         hookName: '#js-accordion',
         tagName: 'a'
     });
+
+    const accordion2 = new Accordion({
+        hookName: '#js-accordion',
+        tagName: 'p'
+    });
 })();
 
 /*
