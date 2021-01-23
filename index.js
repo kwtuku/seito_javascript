@@ -23,11 +23,11 @@ const inoki = ["いーち","にーい","さーん","ダーー！！"];
 
 const test = (arg) => {
   if(inoki.length > arg){
-   console.log("ボンバイエ！");
+    console.log("ボンバイエ！");
   } else {
     console.log("ボンバ...!");
   }
-      
+
 };
 
 // test(3);
