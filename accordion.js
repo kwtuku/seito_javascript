@@ -38,7 +38,7 @@
     }
 
     // インスタンスを生成
-    const fuckingAccordion = new Accordion({
+    const accordion = new Accordion({
         hookName: '#js-accordion',
         tagName: 'a'
     });
